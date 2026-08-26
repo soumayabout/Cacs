@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "missions": "Nos Missions",
+    "services": "Nos Services",
+    "events": "Nos Évènements",
+    "members": "Nos Adhérents",
+    "news": "Actualités",
+    "abd": "Africa Business Days",
+    "join": "Demande d'adhésion",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "mySpace": "Mon Espace"
+  },
+  "home": {
+    "hero": {
+      "badge": "Événement Majeur",
+      "readMore": "En savoir plus",
+      "join": "Demande d'adhésion"
+    },
+    "news": {
+      "title": "Actualités Flash",
+      "diplomacy": "Diplomatie Économique"
+    },
+    "about": {
+      "title": "Qui sommes-nous?",
+      "subtitle": "La Chambre Africaine de Commerce et de Services",
+      "description": "La Chambre Africaine de Commerce et de Services (CACS) est une plateforme de création de valeur dont l'objectif est de faciliter l'implantation des entreprises du continent.",
+      "learnMore": "En savoir plus sur la CACS"
+    },
+    "stats": {
+      "title": "Vocation Stratégique",
+      "quote": "Tisser des liens d'affaires entre nos membres et ériger des ponts commerciaux entre le Maroc et leurs différents pays d'origine.",
+      "diplomatic": "Représentations diplomatiques",
+      "suds": "Milliers de Sud-Sud"
+    },
+    "pillars": {
+      "title": "Appuis au Tissu de l'Entreprise",
+      "federate": "FÉDÉRER",
+      "facilitate": "FACILITER",
+      "strengthen": "RENFORCER",
+      "develop": "DÉVELOPPER"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Une palette complète de services à destination des entreprises membres",
+      "relation": "Mise en Relation Directe",
+      "lobbying": "Plaidoyer & Lobbying",
+      "support": "Accompagnement Sur Mesure"
+    },
+    "partnership": {
+      "title": "PARTENARIAT : SIGNATURE DE CONVENTION CFCIM X CACS",
+      "description": "La Chambre Française de Commerce et d'Industrie du Maroc (CFCIM) et la Chambre Africaine de Commerce et de Services (CACS) ont scellé une alliance stratégique.",
+      "benefits": "Facilitation des échanges commerciaux inter-africains",
+      "join": "Rejoignez le Réseau CACS"
+    },
+    "members": {
+      "title": "Nos Adhérents",
+      "subtitle": "LES SOCIÉTÉS QUI NOUS ONT FAIT CONFIANCE"
+    }
+  },
+  "about": {
+    "banner": {
+      "title": "À PROPOS DE NOUS",
+      "subtitle": "Découvrez la vision et la mission de la Chambre Africaine de Commerce et de Services"
+    },
+    "president": {
+      "title": "MOT DU PRÉSIDENT",
+      "name": "ABDELMONAIM FAOUZI",
+      "role": "Président de la CACS"
+    },
+    "governance": {
+      "title": "Membres du Conseil d'Administration"
+    },
+    "hub": {
+      "title": "HUB DES AFFAIRES MAROC AFRIQUE",
+      "diplomatic": "Représentations diplomatiques",
+      "suds": "Milliers de Sud-Sud",
+      "standards": "Normes internationales",
+      "support": "Accompagnement réactif"
+    }
+  },
+  "services": {
+    "banner": {
+      "title": "NOS SERVICES",
+      "subtitle": "Une palette complète de services à destination des entreprises membres"
+    },
+    "relation": {
+      "title": "Mise en Relation D'affaires",
+      "description": "Mise en relation directe entre entreprises membres pour faciliter les partenariats B2B et les opportunités commerciales."
+    },
+    "implantation": {
+      "title": "Accompagnement Implantation",
+      "description": "Support stratégique et logistique complet pour la création de filiales et l'installation dans les provinces du Sud du Maroc."
+    },
+    "lobbying": {
+      "title": "Plaidoyer & Représentation",
+      "description": "Porte-parole et défense des intérêts des entreprises membres auprès des instances décisionnelles privées et publiques."
+    }
+  },
+  "events": {
+    "banner": {
+      "title": "NOS ÉVÈNEMENTS",
+      "subtitle": "Découvrez nos forums, rencontres d'affaires B2B, webinaires et conférences stratégiques."
+    },
+    "filters": {
+      "all": "Tous",
+      "webinar": "Webinaire",
+      "b2b": "Rencontre B2B",
+      "roundtable": "Table Ronde",
+      "forum": "Forum"
+    },
+    "register": "S'inscrire"
+  },
+  "members": {
+    "banner": {
+      "title": "NOS ADHÉRENTS",
+      "subtitle": "Découvrez le réseau dynamique des entreprises membres de la Chambre Africaine de Commerce et de Services."
+    },
+    "search": "Rechercher une entreprise, pays, secteur...",
+    "sectors": {
+      "all": "Tous",
+      "transport": "Transport & Logistique",
+      "finance": "Finance & Investissement",
+      "tech": "Technologies & IT",
+      "agro": "Agroalimentaire"
+    }
+  },
+  "news": {
+    "banner": {
+      "title": "NOS ACTUALITÉS",
+      "subtitle": "Suivez les dernières nouvelles de la Chambre Africaine de Commerce et de Services."
+    },
+    "categories": {
+      "all": "Tous",
+      "cooperation": "Coopération",
+      "partnership": "Partenariat",
+      "event": "Événement",
+      "webinar": "Webinaire"
+    },
+    "readMore": "Lire la suite"
+  },
+  "contact": {
+    "banner": {
+      "title": "NOUS CONTACTER",
+      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions."
+    },
+    "info": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Sièges",
+      "hours": "Heures d'ouverture"
+    },
+    "form": {
+      "title": "Formulaire de Contact",
+      "name": "Nom complet",
+      "company": "Entreprise",
+      "email": "Email professionnel",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer mon message"
+    },
+    "subjects": {
+      "select": "Sélectionnez un sujet",
+      "information": "Demande d'information",
+      "adhesion": "Demande d'adhésion",
+      "partnership": "Proposition de partenariat",
+      "event": "Question sur un événement",
+      "press": "Presse & Média",
+      "other": "Autre"
+    },
+    "success": {
+      "title": "Message envoyé avec succès !",
+      "message": "Nous vous remercions pour votre message. Notre équipe vous contactera dans les plus brefs délais."
+    }
+  },
+  "membership": {
+    "banner": {
+      "title": "DEMANDE D'ADHÉSION",
+      "subtitle": "Devenez membre de la Chambre Africaine de Commerce et de Services et accédez à des opportunités d'affaires uniques."
+    },
+    "form": {
+      "title": "Formulaire d'Adhésion",
+      "companyName": "Nom de l'entreprise",
+      "sector": "Secteur d'activité",
+      "contactName": "Nom du contact",
+      "email": "Email professionnel",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "website": "Site web",
+      "type": "Type d'entreprise",
+      "message": "Message",
+      "submit": "Soumettre ma demande"
+    },
+    "success": {
+      "title": "Votre demande a été soumise avec succès !",
+      "message": "Un responsable de la CACS prendra contact avec vous dans les 48h pour finaliser votre adhésion."
+    }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact & Sièges",
+    "newsletter": "Newsletter",
+    "newsletterText": "Inscrivez-vous à notre newsletter pour recevoir les dernières opportunités et événements d'affaires en Afrique.",
+    "emailPlaceholder": "Votre email professionnel",
+    "subscribe": "S'abonner",
+    "copyright": "Tous droits réservés",
+    "join": "Demande d'adhésion",
+    "memberSpace": "Espace Membre"
+  }
+}

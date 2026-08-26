@@ -1,0 +1,179 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import SEO from '../components/common/SEO.jsx';
+import { Search, Building2, MapPin, Globe, Mail } from 'lucide-react';
+
+const mockMembers = [
+  {
+    id: 1,
+    companyName: 'Société de Transport & Logistique du Sud',
+    sector: 'Transport & Logistique',
+    country: 'Maroc',
+    city: 'Dakhla',
+    contactName: 'Karim Bennani',
+    contactEmail: 'contact@stls.ma',
+    website: 'www.stls.ma',
+    type: 'Grande Entreprise',
+    description: 'Spécialiste du transport frigorifique et du transit transfrontalier vers l\'Afrique de l\'Ouest.'
+  },
+  {
+    id: 2,
+    companyName: 'Office Holding Africa',
+    sector: 'Finance & Investissement',
+    country: 'Sénégal',
+    city: 'Dakar',
+    contactName: 'Amadou Diallo',
+    contactEmail: 'adiallo@officeholding.sn',
+    website: 'www.officeholding.sn',
+    type: 'Grande Entreprise',
+    description: 'Fonds d\'investissement dédié aux infrastructures de développement en zone CEDEAO.'
+  },
+  {
+    id: 3,
+    companyName: 'YOOL Digital Services',
+    sector: 'Technologies & IT',
+    country: 'Maroc',
+    city: 'Casablanca',
+    contactName: 'Sarra Mansouri',
+    contactEmail: 'info@yool.ma',
+    website: 'www.yool.ma',
+    type: 'Startup',
+    description: 'Éditeur de solutions de numérisation et de plateformes bancaires pour le marché africain.'
+  },
+  {
+    id: 4,
+    companyName: 'Maghreb Agro Industries',
+    sector: 'Agroalimentaire',
+    country: 'Côte d\'Ivoire',
+    city: 'Abidjan',
+    contactName: 'Kouassi Yao',
+    contactEmail: 'ky@maghrebagro.ci',
+    website: 'www.maghrebagro.ci',
+    type: 'PME',
+    description: 'Transformation et exportation de produits agricoles de haute valeur ajoutée.'
+  }
+];
+
+const Members = () => {
+  const [members, setMembers] = useState(mockMembers);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSector, setSelectedSector] = useState('');
+
+  useEffect(() => {
+    axios.get('http://localhost:4000/api/members')
+      .then(res => {
+        if (res.data && res.data.data && res.data.data.length > 0) setMembers(res.data.data);
+      })
+      .catch(() => {});
+  }, []);
+
+  const sectors = ['Tous', 'Transport & Logistique', 'Finance & Investissement', 'Technologies & IT', 'Agroalimentaire'];
+
+  const filteredMembers = members.filter((m) => {
+    const matchesSearch = m.companyName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          m.sector.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          m.country.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSector = !selectedSector || selectedSector === 'Tous' || m.sector === selectedSector;
+    return matchesSearch && matchesSector;
+  });
+
+  return (
+    <>
+      <SEO
+        title="Nos Adhérents"
+        description="Découvrez le réseau dynamique des entreprises membres de la Chambre Africaine de Commerce et de Services. Des entreprises de divers secteurs engagées dans le développement des échanges en Afrique."
+        keywords="CACS Africa, Adhérents, Membres, Entreprises, Réseau, Afrique, Maroc, Transport, Finance, Technologie, Agroalimentaire"
+      />
+      <div className="bg-gray-50 min-h-screen pb-16" id="main-content">
+      {/* Banner */}
+      <div className="bg-cacs-blue text-white py-16 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <span className="text-xs font-bold text-cacs-gold uppercase tracking-widest">Réseau</span>
+          <h1 className="text-3xl md:text-5xl font-extrabold uppercase mt-2 mb-4">NOS ADHÉRENTS</h1>
+          <p className="text-sm text-gray-200 font-light">
+            Découvrez le réseau dynamique des entreprises membres de la Chambre Africaine de Commerce et de Services.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 mt-10">
+        {/* Search & Filter Bar */}
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-10 flex flex-col md:flex-row gap-4 justify-between items-center">
+          <div className="relative w-full md:w-96">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Rechercher une entreprise, pays, secteur..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-cacs-blue"
+              aria-label="Rechercher parmi les membres"
+            />
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {sectors.map((sector) => (
+              <button
+                key={sector}
+                onClick={() => setSelectedSector(sector)}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                  selectedSector === sector
+                    ? 'bg-cacs-blue text-white shadow-md'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+                aria-pressed={selectedSector === sector}
+              >
+                {sector}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Members Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredMembers.map((member) => (
+            <div key={member.id} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+              <div>
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-cacs-blue flex items-center justify-center font-bold text-lg border border-blue-100">
+                    <Building size={24} />
+                  </div>
+                  <span className="bg-green-50 text-cacs-emerald text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
+                    {member.type}
+                  </span>
+                </div>
+
+                <h3 className="font-bold text-cacs-blue text-base mb-1">{member.companyName}</h3>
+                <p className="text-xs text-cacs-emerald font-medium mb-3">{member.sector}</p>
+                <p className="text-xs text-gray-600 mb-4 line-clamp-3 font-light leading-relaxed">
+                  {member.description}
+                </p>
+              </div>
+
+              <div className="border-t border-gray-100 pt-4 space-y-2 text-xs text-gray-500">
+                <div className="flex items-center gap-2">
+                  <MapPin size={14} className="text-cacs-pink shrink-0" />
+                  <span>{member.city}, {member.country}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail size={14} className="text-cacs-blue shrink-0" />
+                  <span>{member.contactEmail}</span>
+                </div>
+                {member.website && (
+                  <div className="flex items-center gap-2">
+                    <Globe size={14} className="text-cacs-emerald shrink-0" />
+                    <a href={`https://${member.website}`} target="_blank" rel="noreferrer" className="text-cacs-blue hover:underline">
+                      {member.website}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Members;
